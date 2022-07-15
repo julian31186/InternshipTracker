@@ -3,7 +3,7 @@ import "./App.css";
 import Searchbar from "./components/Searchbar";
 import Filter from "./components/Filter";
 import Newinternshipcard from "./components/Newinternshipcard";
-import Intenshipcard from "./components/Internshipcard";
+import Internshipcard from "./components/Internshipcard";
 
 function App() {
 
@@ -18,6 +18,8 @@ function App() {
         <label for="my-modal-3" class="btn modal-button">
           + New
         </label>
+
+        
         
         <div className="flex items-center justify-center">
           <Searchbar />
@@ -25,7 +27,12 @@ function App() {
         </div>
         
       </div>
-      
+
+      <Internshipcard/>
+      <Internshipcard/>
+      <Internshipcard/>
+
+
       <div className="flex justify-center"></div>
     </div>
   );
