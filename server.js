@@ -10,6 +10,17 @@ mongoose.connect(process.env.MONGO_URI, {
 const app = express();
 const port = 3001;
 
+const internshipScehma = new mongoose.Schema({
+    title: String,
+    position: String,
+    link: String,
+    status: Integer,
+})
+
+module.exports = mongoose.model('Internship', internshipScehma);
+
+
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 })
