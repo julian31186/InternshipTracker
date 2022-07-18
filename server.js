@@ -1,31 +1,24 @@
 
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const internship = require('./internshipScehma');
+
+const app = express();
+const port = 3001;
+
+
+app.use(cors());
+app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
 }) .then(() => console.log('Connected to MongoDB')).catch(err => console.log(err));
 
-const app = express();
-const port = 3001;
+app.use("/",require("./noteRoute"));
 
-const internshipScehma = new mongoose.Schema({
-    title: String,
-    position: String,
-    link: String,
-    status: Integer,
-})
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
-module.exports = mongoose.model('Internship', internshipScehma);
-
-
-
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-})
-
-
-app.listen(port)
-
+  
 

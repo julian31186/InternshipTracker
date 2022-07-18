@@ -29,8 +29,7 @@ function App() {
       </div>
 
       <Internshipcard/>
-      <Internshipcard/>
-      <Internshipcard/>
+
 
 
       <div className="flex justify-center"></div>
