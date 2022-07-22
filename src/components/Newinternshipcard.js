@@ -82,6 +82,7 @@ function Newinternshipcard() {
                 <option disabled selected>
                   Status
                 </option>
+                <option>...</option>
                 <option name="Pending">Pending</option>
                 <option name="Accepted">Accepted</option>
                 <option name="Rejected">Rejected</option>

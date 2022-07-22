@@ -16,7 +16,8 @@ mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
 }) .then(() => console.log('Connected to MongoDB')).catch(err => console.log(err));
 
-app.use("/",require("./noteRoute"));
+
+app.use(require("./noteRoute"));
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const internship = require('./internshipScehma');
 
 
-router.route("/create").post((req, res) => {
+router.post("/create" , (req, res) => {
     console.log("Internship added!")
     const title = req.body.title;
     const position = req.body.position;
@@ -15,6 +15,7 @@ router.route("/create").post((req, res) => {
         link,
         status
     })
+
     newInternship.save()
 
 })

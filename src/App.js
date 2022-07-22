@@ -1,11 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 import Searchbar from "./components/Searchbar";
 import Filter from "./components/Filter";
 import Newinternshipcard from "./components/Newinternshipcard";
 import Internshipcard from "./components/Internshipcard";
 
 function App() {
+
+  const [cards,setCards ] = useState([])
 
 
   return (
@@ -24,10 +27,12 @@ function App() {
         <div className="flex items-center justify-center">
           <Searchbar />
           <Filter />
+
+          
         </div>
-        
       </div>
 
+      
       <Internshipcard/>
 
 
